@@ -11,7 +11,7 @@ function readTextFile(file)
             {
                 var allText = rawFile.responseText;
                 var lineArr = allText.split('\n');
-                return lineArr[Math.floor(Math.random()*lineArr.length)];
+                output = lineArr[Math.floor(Math.random()*lineArr.length)];
             }
         }
     }
@@ -19,11 +19,11 @@ function readTextFile(file)
 }
 var proverb = readTextFile("proverbs.txt")
 document.write("Proverb:");
-document.write(proverb);
+document.write(output);
 var wisdom = readTextFile("wisdom.txt")
 document.write("Wisdom:");
-document.write(wisdom);
+document.write(output);
 var action = readTextFile("actions.txt")
 document.write("Action:");
-document.write(action);
+document.write(output);
 </script>
