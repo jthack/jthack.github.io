@@ -18,7 +18,7 @@ function readTextFile(file)
             {
                 var allText = rawFile.responseText;
                 var lineArr = allText.split('\n');
-                alert(lineArr[Math.floor(Math.random()*all_proverbs.length)]);
+                alert(lineArr[Math.floor(Math.random()*lineArr.length)]);
             }
         }
     }
