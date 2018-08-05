@@ -1,3 +1,10 @@
+<h1>Proverb:</h1>
+<p id="proverb"></p>
+<h1>Wisdom:</h1>
+<p id="wisdom"></p>
+<h1>Action:</h1>
+<p id="action"></p>
+
 <script>
 function readTextFile(file)
 {
@@ -10,11 +17,19 @@ function readTextFile(file)
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                alert(allText);
+                return allText;
             }
         }
     }
     rawFile.send(null);
 }
-readTextFile("actions.txt")
+var all_proverbs = readTextFile("proverbs.txt")
+var proverb = all_proverbs[Math.floor(Math.random()*all_proverbs.length)];
+document.getElementById("proverb").innerHTML = proverb
+var all_wisdom = readTextFile("wisdom.txt")
+var wisdom = all_wisdom[Math.floor(Math.random()*all_wisdom.length)];
+document.getElementById("proverb").innerHTML = wisdom
+var all_actions = readTextFile("actions.txt")
+var action = all_actions[Math.floor(Math.random()*all_actions.length)];
+document.getElementById("proverb").innerHTML = action
 </script>
