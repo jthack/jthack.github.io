@@ -29,8 +29,7 @@ function readTextFile(file)
     }
     rawFile.send(null);
 }
-var proverb = readTextFile("proverbs.txt")
-document.getElementById("proverb").innerHTML = proverb;
+document.getElementById("proverb").innerHTML = readTextFile("proverbs.txt");
 var wisdom = readTextFile("wisdom.txt")
 document.write("Wisdom:<br>");
 document.write(output);
