@@ -17,11 +17,11 @@ function readTextFile(file)
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                alert(allText);
+                var lineArr = allText.split('\n');
+                alert(lineArr[Math.floor(Math.random()*all_proverbs.length)]);
             }
         }
     }
-    rawFile.send(null);
 }
 var all_proverbs = readTextFile("proverbs.txt")
 var proverb = all_proverbs[Math.floor(Math.random()*all_proverbs.length)];
