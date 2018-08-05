@@ -1,4 +1,5 @@
 <p id="demo"></p>
+<h1>Proverb</h1>
 <p id="proverb"></p>
 <p id="wisdom"></p>
 <p id="action"></p>
@@ -27,9 +28,7 @@ function readTextFile(file)
     rawFile.send(null);
 }
 var proverb = readTextFile("proverbs.txt")
-document.write("Proverb:<br>");
-document.write(output);
-document.write("<br>");
+document.getElementById("proverb").innerHTML = proverb;
 var wisdom = readTextFile("wisdom.txt")
 document.write("Wisdom:<br>");
 document.write(output);
