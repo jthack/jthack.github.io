@@ -1,3 +1,11 @@
+<h2>Proverb</h2>
+<p id="proverb"></p>
+<h2>Wisdom</h2>
+<p id="wisdom"></p>
+<h2>Action</h2>
+<p id="action"></p>
+
+
 <script>
 function readTextFile(file)
 {
@@ -11,22 +19,16 @@ function readTextFile(file)
             {
                 var allText = rawFile.responseText;
                 var lineArr = allText.split('\n');
-                output = lineArr[Math.floor(Math.random()*lineArr.length)];
+                output = lineArr[Math.floor(Math.random()*(lineArr.length - 1))];
             }
         }
     }
     rawFile.send(null);
 }
-var proverb = readTextFile("proverbs.txt")
-document.write("Proverb:<br>");
-document.write(output);
-document.write("<br>");
-var wisdom = readTextFile("wisdom.txt")
-document.write("Wisdom:<br>");
-document.write(output);
-document.write("<br>");
-var action = readTextFile("actions.txt")
-document.write("Action:<br>");
-document.write(output);
-document.write("<br>");
+readTextFile("proverbs.txt")
+document.getElementById("proverb").innerHTML = output;
+readTextFile("wisdom.txt")
+document.getElementById("wisdom").innerHTML = output;
+readTextFile("actions.txt")
+document.getElementById("action").innerHTML = output;
 </script>
