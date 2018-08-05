@@ -1,14 +1,10 @@
-<p id="demo"></p>
-<h1>Proverb</h1>
+<h2>Proverb</h2>
 <p id="proverb"></p>
-<h1>Wisdom</h1>
+<h2>Wisdom</h2>
 <p id="wisdom"></p>
-<h1>Action</h1>
+<h2>Action</h2>
 <p id="action"></p>
 
-<script>
-document.getElementById("demo").innerHTML = 5 + 6;
-</script>
 
 <script>
 function readTextFile(file)
@@ -23,7 +19,7 @@ function readTextFile(file)
             {
                 var allText = rawFile.responseText;
                 var lineArr = allText.split('\n');
-                output = lineArr[Math.floor(Math.random()*lineArr.length)];
+                output = lineArr[Math.floor(Math.random()*(lineArr.length - 1))];
             }
         }
     }
