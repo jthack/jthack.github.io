@@ -31,12 +31,8 @@ function readTextFile(file)
 }
 readTextFile("proverbs.txt")
 document.getElementById("proverb").innerHTML = output;
-var wisdom = readTextFile("wisdom.txt")
-document.write("Wisdom:<br>");
-document.write(output);
-document.write("<br>");
-var action = readTextFile("actions.txt")
-document.write("Action:<br>");
-document.write(output);
-document.write("<br>");
+readTextFile("wisdom.txt")
+document.getElementById("wisdom").innerHTML = output;
+readTextFile("actions.txt")
+document.getElementById("action").innerHTML = output;
 </script>
