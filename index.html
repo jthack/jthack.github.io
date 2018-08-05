@@ -22,14 +22,12 @@ function readTextFile(file)
             }
         }
     }
+    rawFile.send(null);
 }
-var all_proverbs = readTextFile("proverbs.txt")
-var proverb = all_proverbs[Math.floor(Math.random()*all_proverbs.length)];
+var proverb = readTextFile("proverbs.txt")
 document.getElementById("proverb").innerHTML = proverb
-var all_wisdom = readTextFile("wisdom.txt")
-var wisdom = all_wisdom[Math.floor(Math.random()*all_wisdom.length)];
-document.getElementById("proverb").innerHTML = wisdom
-var all_actions = readTextFile("actions.txt")
-var action = all_actions[Math.floor(Math.random()*all_actions.length)];
-document.getElementById("proverb").innerHTML = action
+var wisdom = readTextFile("wisdom.txt")
+document.getElementById("wisdom").innerHTML = wisdom
+var action = readTextFile("actions.txt")
+document.getElementById("action").innerHTML = action
 </script>
