@@ -17,7 +17,8 @@ function readTextFile(file)
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                return allText;
+                lines = allText.split("\n");
+                return lines;
             }
         }
     }
