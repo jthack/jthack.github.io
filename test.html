@@ -1,0 +1,41 @@
+<p id="demo"></p>
+<p id="proverb"></p>
+<p id="wisdom"></p>
+<p id="action"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+
+<script>
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                var lineArr = allText.split('\n');
+                output = lineArr[Math.floor(Math.random()*lineArr.length)];
+            }
+        }
+    }
+    rawFile.send(null);
+}
+var proverb = readTextFile("proverbs.txt")
+document.write("Proverb:<br>");
+document.write(output);
+document.write("<br>");
+var wisdom = readTextFile("wisdom.txt")
+document.write("Wisdom:<br>");
+document.write(output);
+document.write("<br>");
+var action = readTextFile("actions.txt")
+document.write("Action:<br>");
+document.write(output);
+document.write("<br>");
+</script>
