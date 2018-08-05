@@ -1,10 +1,3 @@
-<h1>Proverb:</h1>
-<p id="proverb"></p>
-<h1>Wisdom:</h1>
-<p id="wisdom"></p>
-<h1>Action:</h1>
-<p id="action"></p>
-
 <script>
 function readTextFile(file)
 {
@@ -25,9 +18,12 @@ function readTextFile(file)
     rawFile.send(null);
 }
 var proverb = readTextFile("proverbs.txt")
+document.write("Proverb:");
 document.write(proverb);
 var wisdom = readTextFile("wisdom.txt")
+document.write("Wisdom:");
 document.write(wisdom);
 var action = readTextFile("actions.txt")
+document.write("Action:");
 document.write(action);
 </script>
