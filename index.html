@@ -7,6 +7,20 @@
 
 
 <script>
+// the initial seed
+Math.seed = 6;
+
+// in order to work 'Math.seed' must NOT be undefined,
+// so in any case, you HAVE to provide a Math.seed
+Math.seededRandom = function(max, min) {
+    max = max || 1;
+    min = min || 0;
+
+    Math.seed = (Math.seed * 9301 + 49297) % 233280;
+    var rnd = Math.seed / 233280;
+
+    return min + rnd * (max - min);
+}
 function readTextFile(file)
 {
     var rawFile = new XMLHttpRequest();
@@ -17,9 +31,10 @@ function readTextFile(file)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
+		var d = new Date();
                 var allText = rawFile.responseText;
                 var lineArr = allText.split('\n');
-                output = lineArr[Math.floor(Math.random()*(lineArr.length - 1))];
+                output = lineArr[Math.floor(Math.seededRandom(d.getDate())*(lineArr.length - 1))];
             }
         }
     }
