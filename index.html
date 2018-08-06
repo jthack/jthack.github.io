@@ -8,7 +8,8 @@
 
 <script>
 // the initial seed
-Math.seed = 6;
+var d = new Date();
+Math.seed = d.getDate();
 
 // in order to work 'Math.seed' must NOT be undefined,
 // so in any case, you HAVE to provide a Math.seed
@@ -31,10 +32,9 @@ function readTextFile(file)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-		var d = new Date();
                 var allText = rawFile.responseText;
                 var lineArr = allText.split('\n');
-                output = lineArr[Math.floor(Math.seededRandom(d.getDate())*(lineArr.length - 1))];
+                output = lineArr[Math.floor(Math.seededRandom()*(lineArr.length - 1))];
             }
         }
     }
