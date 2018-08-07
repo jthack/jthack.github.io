@@ -1,0 +1,406 @@
+#background{
+    background:white;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-4;
+
+}
+
+canvas {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-5;
+}
+
+
+div{
+    color: black;
+}
+
+html{
+    margin:0;
+    padding:0;
+    background:white;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+p{
+    color: white;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+.wrapper {
+    border: none;
+    font: normal 64px/1 "ubuntu", Helvetica, sans-serif;
+    color: #292f33;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: rgba(255,255,255,0);
+}
+
+.title{
+    margin-top: 5%;
+    display: inline-block;
+    background: rgba(255,255,255,0);
+    color: #292f33;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.tag1{
+    font: normal 48px/1 "ubuntu", Helvetica, sans-serif;
+    background: rgba(255,255,255,0);
+    color: #292f33;
+    position: relative;
+    width: 80px;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-left: 10%;
+}
+.tag2{
+    font: normal 48px/1 "ubuntu", Helvetica, sans-serif;
+    background: rgba(255,255,255,0);
+    color: #292f33;
+    position: static;
+    width: 80px;
+    display: inline-flex;
+    margin-right: 10%;
+}
+
+.tag-abs{
+    font: normal 48px/1 "ubuntu", Helvetica, sans-serif;
+    background: rgba(255,255,255,0);
+    color: #292f33;
+    position: relative;
+    width: 10px;
+    display: inline-flex;
+    text-align: center;
+}
+
+
+.terminal-window {
+  text-align: left;
+  width: 50%;
+  height: 45%;
+  min-height: 360px;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+  box-shadow: 5px 5px 50px #888888;
+  border-bottom-width:10px;
+  border-bottom-color: #2C001E;
+  border-bottom-style: solid;
+  border-radius: 15px;
+  border-bottom-width: 35px;
+}
+
+.terminal-window header {
+  background: rgb(69,69,69);
+  height: 35px;
+  border-radius: 8px 8px 0 0;
+  padding-left: 10px;
+}
+
+.terminal-window header .button {
+  width: 12px;
+  height: 12px;
+  margin: 10px 4px 0 0;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.terminal-window header .button.max {
+  background: #3BB662;
+}
+
+.terminal-window header .button.min {
+  background: #E5C30F;
+}
+
+.terminal-window header .button.close {
+  background: #E75448;
+}
+
+.terminal-window section.terminal {
+  color: white;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-size: 11pt;
+  background: #2C001E;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  bottom: 0;
+  overflow: auto;
+}
+
+.link:hover{
+  color: white;
+  text-decoration: underline;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-size: 11pt;
+  background: #2C001E;
+}
+
+a:link{
+  color: white;
+  text-decoration: none;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-size: 11pt;
+  background: #2C001E;
+}
+a:visited{
+  color: white;
+  text-decoration: none;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-size: 11pt;
+  background: #2C001E;
+}
+
+.sidebar-left{
+    margin-top: 12%;
+    margin-left: 10%;
+    position: fixed;
+}
+.sidebar-right{
+    margin-top: 12%;
+    margin-left: 80%;
+    position: fixed;
+}
+
+.mac-window {
+  text-align: left;
+  width: 50%;
+  height: 45%;
+  min-height: 360px;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+  box-shadow: 5px 5px 50px #888888;
+  border-bottom-width:10px;
+  border-bottom-color: #fff;
+  border-bottom-style: solid;
+  border-radius: 15px;
+  border-bottom-width: 35px;
+}
+
+.mac-window header {
+  background: #D4D4D4;
+  height: 35px;
+  border-radius: 8px 8px 0 0;
+  padding-left: 10px;
+  
+}
+
+.mac-window header .button {
+  width: 12px;
+  height: 12px;
+  margin: 10px 4px 0 0;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.mac-window header .button.max {
+  background: #3BB662;
+}
+
+.mac-window header .button.min {
+  background: #E5C30F;
+}
+
+.mac-window header .button.close {
+  background: #E75448;
+}
+
+.mac-window section.mac {
+  color: black;
+  font-family: 'Andale Mono', Consolas, 'Courier New';
+  font-size: 11pt;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  bottom: 0;
+  overflow: auto;
+}
+
+.wind-window {
+  text-align: left;
+  width: 50%;
+  height: 45%;
+  min-height: 360px;
+  margin: auto;
+  position: relative;
+  box-shadow: 5px 5px 50px #888888;
+  border-bottom-width:10px;
+  border-bottom-color: ;
+  border-bottom-style: solid;
+  border-bottom-width: 35px;
+}
+
+.wind-window header {
+  background: #369DE2;
+  height: 35px;
+  padding-left: 10px;
+  font-family: 'Andale Mono', Consolas, 'Courier New';
+}
+
+.wind-window header .button {
+  width: 12px;
+  height: 12px;
+  margin: 10px 4px 0 0;
+  border-radius: 8px;
+}
+
+.wind-window header .button.max {
+  background: #3BB662;
+}
+
+.wind-window header .button.min {
+  background: #E5C30F;
+}
+
+.wind-window header .button.close {
+  background: #E75448;
+}
+
+.wind-window section.wind {
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11pt;
+  background: black;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  bottom: 0;
+  overflow: auto;
+}
+
+.OPEN1 {
+    vertical-align:top;
+    display:-moz-inline-block;
+    display: inline-block;
+    margin-top: 6.5px;
+    margin-right: 20px;
+    color: #fff;
+}
+.OPEN2 {
+    vertical-align:top;
+    display:-moz-inline-block;
+    width: 10px;
+    height: 10px;
+    outline: #FFFFFF solid 2px;
+    display: inline-grid;
+    margin-top:10px;
+    margin-right: 20px;
+}
+.OPEN3 {
+    vertical-align:top;
+    display:-moz-inline-block;
+    display:-moz-inline-box;
+    display: inline-block;
+    margin-top: 3px;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.MAC {
+    color:black;
+    display: inline;
+    font-family: 'Andale Mono', Consolas, 'Courier New';
+}
+
+.linux1{
+    color:green;
+    display: inline;
+}
+
+.centeredprompt{
+    margin:auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .sidebar-left{
+        margin-top: 600px;
+        margin-left: 28%;
+        position:absolute;
+    }
+    .sidebar-right{
+        margin-top: 600px;
+        margin-left: 54%;
+        position:absolute;
+    }
+    
+    .tag1{
+        visibility: hidden;
+    }
+    .tag2{
+        visibility: hidden;
+    }
+    .tag-abs{
+        visibility: hidden;
+    }
+    .terminal-window {
+        margin-top: -10%;
+        width: 90%;
+    }
+    .mac-window {
+        margin-top: 150px;
+        width: 90%;
+    }
+    .wind-window {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar-left{
+        margin-top: 550px;
+        margin-left: 35%;
+        position:absolute;
+    }
+    .sidebar-right{
+        margin-top: 700px;
+        margin-left: 35%;
+        position:absolute;
+    }s
+    
+    .tag1{
+        visibility: hidden;
+    }
+    .tag2{
+        visibility: hidden;
+    }
+    .tag-abs{
+        visibility: hidden;
+    }
+    .terminal-window {
+        margin-top: -20%;
+        width: 90%;
+    }
+    .mac-window {
+        margin-top: 300px;
+        width: 90%;
+    }
+    .wind-window {
+        width: 90%;
+    }
+
+}

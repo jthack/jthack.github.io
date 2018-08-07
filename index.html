@@ -1,50 +1,68 @@
-<h2>Proverb</h2>
-<p id="proverb"></p>
-<h2>Wisdom</h2>
-<p id="wisdom"></p>
-<h2>Action</h2>
-<p id="action"></p>
+<!doctype html>
+<html lang="en" class="wf-ubuntu-n4-active wf-ubuntu-i4-active wf-ubuntu-i7-active wf-ubuntu-n7-active wf-active">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A daily proverb, piece of wisdom, and action item.">
+    <title>jthack.github.io</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.edgefonts.net/c/57904b/1w;ubuntu,2,2cm5RR:W:i4,2cm5RW:W:i7,2cm5RQ:W:n4,2cm5RV:W:n7/l" media="all">
+<script type="text/javascript" script-name="ubuntu" src="https://use.edgefonts.net/ubuntu.js"></script>
+</head>
+<body>
+<script src="background.js"></script>
+  <div id="main">
+    <div class="content" style="text-align: center;">
+    <h3>Proverb</h3>
+    <p id="proverb"></p>
+    <h3>Wisdom</h3>
+    <p id="wisdom"></p>
+    <h3>Action</h3>
+    <p id="action"></p>
 
 
-<script>
-// the initial seed
-var d = new Date();
-Math.seed = d.getDate();
+    <script>
+    // the initial seed
+    var d = new Date();
+    Math.seed = d.getDate();
 
-// in order to work 'Math.seed' must NOT be undefined,
-// so in any case, you HAVE to provide a Math.seed
-Math.seededRandom = function(max, min) {
-    max = max || 1;
-    min = min || 0;
+    // in order to work 'Math.seed' must NOT be undefined,
+    // so in any case, you HAVE to provide a Math.seed
+    Math.seededRandom = function(max, min) {
+        max = max || 1;
+        min = min || 0;
 
-    Math.seed = (Math.seed * 9301 + 49297) % 233280;
-    var rnd = Math.seed / 233280;
+        Math.seed = (Math.seed * 9301 + 49297) % 233280;
+        var rnd = Math.seed / 233280;
 
-    return min + rnd * (max - min);
-}
-function readTextFile(file)
-{
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
+        return min + rnd * (max - min);
+    }
+    function readTextFile(file)
     {
-        if(rawFile.readyState === 4)
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function ()
         {
-            if(rawFile.status === 200 || rawFile.status == 0)
+            if(rawFile.readyState === 4)
             {
-                var allText = rawFile.responseText;
-                var lineArr = allText.split('\n');
-                output = lineArr[Math.floor(Math.seededRandom()*(lineArr.length - 1))];
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    var allText = rawFile.responseText;
+                    var lineArr = allText.split('\n');
+                    output = lineArr[Math.floor(Math.seededRandom()*(lineArr.length - 1))];
+                }
             }
         }
+        rawFile.send(null);
     }
-    rawFile.send(null);
-}
-readTextFile("proverbs.txt")
-document.getElementById("proverb").innerHTML = output;
-readTextFile("wisdom.txt")
-document.getElementById("wisdom").innerHTML = output;
-readTextFile("actions.txt")
-document.getElementById("action").innerHTML = output;
-</script>
-<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    readTextFile("proverbs.txt")
+    document.getElementById("proverb").innerHTML = output;
+    readTextFile("wisdom.txt")
+    document.getElementById("wisdom").innerHTML = output;
+    readTextFile("actions.txt")
+    document.getElementById("action").innerHTML = output;
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    </div>
+  </div>
+</body>
