@@ -190,7 +190,7 @@ a:visited{
   position: relative;
   box-shadow: 5px 5px 50px #888888;
   border-bottom-width:10px;
-  border-bottom-color: #fff;
+  border-bottom-color: #535353;
   border-bottom-style: solid;
   border-radius: 15px;
   border-bottom-width: 35px;
@@ -225,10 +225,10 @@ a:visited{
 }
 
 .mac-window section.mac {
-  color: black;
+  color: #34e552;
   font-family: 'Andale Mono', Consolas, 'Courier New';
   font-size: 11pt;
-  background: #fff;
+  background: #535353;
   padding: 10px;
   box-sizing: border-box;
   position: absolute;
@@ -321,7 +321,7 @@ a:visited{
 }
 
 .MAC {
-    color:black;
+    color:white;
     display: inline;
     font-family: 'Andale Mono', Consolas, 'Courier New';
 }

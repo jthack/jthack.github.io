@@ -23,27 +23,20 @@
                 <div class="button close"></div>
             </header>
             <section class="mac">
-              <h3>Proverb</h3>
+              <h3>> Haitian Proverb:</h3>
               <a id="proverb"></a>
               <br>
-              <h3>Wisdom</h3>
+              <h3>> Piece of Wisdom:</h3>
               <a id="wisdom"></a>
               <br>
-              <h3>Action</h3>
+              <h3>> Action Item:</h3>
               <a id="action"></a>
               <br>
+              <br>
+              <br>
+              <p style="text-align: center;">This page updates daily.</p>
             </section>
         </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>This page updates daily.</p>
 
 
     <script>
@@ -81,7 +74,7 @@
         rawFile.send(null);
     }
     readTextFile("proverbs.txt")
-    document.getElementById("proverb").innerHTML = output;
+    document.getElementById("proverb").innerHTML = ">" + output;
     readTextFile("wisdom.txt")
     document.getElementById("wisdom").innerHTML = output;
     readTextFile("actions.txt")
